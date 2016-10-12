@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.custom.i18n.encoding" value="GB2312"/>
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="search" class="action.Search">
+            <result name="success">/searchResult.jsp</result>
+            <result name="error">/nullAuthor.jsp</result>
+        </action>
+        <action name="allBook" class="action.AllBook">
+            <result name="success">/allBook.jsp</result>
+        </action>
+        <action name="allAuthor" class="action.AllAuthor">
+            <result name="success">/allAuthor.jsp</result>
+        </action>
+        <action name="detail" class="action.Detail">
+            <result name="success">/detail.jsp</result>
+        </action>
+        <action name="edit" class="action.Edit">
+            <result name="success">/update.jsp</result>
+        </action>
+        <action name="update" class="action.Update">
+            <result name="success">/updateSuccess.jsp</result>
+        </action>
+        <action name="delete" class="action.Delete">
+            <result name="success">/deleteSuccess.jsp</result>
+        </action>
+        <action name="add" class="action.Add">
+            <result name="success">/addSuccess.jsp</result>
+            <result name="error">/addFail.jsp</result>
+        </action>
+    </package>
+</struts>
